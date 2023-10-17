@@ -1,10 +1,11 @@
-import { Children } from "react";
+import React from "react";
 
 import { ClerkProvider } from "@clerk/nextjs";
 import "../globals.css";
 import { Inter } from "next/font/google";
 
 // SEO : Search Engine Optimisation
+//The goal of SEO is to create a strategy that will increase your rankings position in search engine results. The higher the ranking, the more organic traffic to your site, which ultimately leads to more business for you!
 
 export const metadata = {
   title: "Threads",
