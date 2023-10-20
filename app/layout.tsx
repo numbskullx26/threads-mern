@@ -1,4 +1,4 @@
-import { ClerkProvider } from "@clerk/nextjs";
+import { ClerkProvider, currentUser } from "@clerk/nextjs";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description: "A Nextjs 13 Meta Threads Application",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -30,7 +30,7 @@ export default function RootLayout({
         <body className={inter.className}>
           <Topbar />
 
-          <main>
+          <main className="flex flex-row">
             <LeftSidebar />
 
             <section className="main-container">
